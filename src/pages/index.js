@@ -18,6 +18,7 @@ class RootIndex extends React.Component {
           <Helmet title={siteTitle} />
           <Hero data={author.node} />
           <div className="wrapper">
+          <p className="hookpara"> Hi my name is George Stark. I have been working in software development for over 20 years and leading software development teams delivering software for over 10 years. I am passionate about building great software and great software teams. </p>
             <h2 className="section-headline">Recent articles</h2>
             <ul className="article-list">
               {posts.map(({ node }) => {

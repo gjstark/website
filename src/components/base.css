@@ -20,6 +20,11 @@ img {
   width: 100%;
 }
 
+.hookpara {
+  font-size: 1em;
+  font-weight: bold;
+}
+
 h1,
 h2,
 h3 {
