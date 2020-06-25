@@ -65,7 +65,7 @@ export const pageQuery = graphql`
         }
       }
     }
-    allContentfulPerson(filter: { contentful_id: { eq: "15jwOBqpxqSAOy2eOO4S0m" } }) {
+    allContentfulPerson(filter: { contentful_id: { eq: "2ntJSlMVNqYP4p2XCO6JDH" } }) {
       edges {
         node {
           name
