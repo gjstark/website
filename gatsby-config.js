@@ -19,12 +19,14 @@ if (!spaceId || !accessToken) {
 module.exports = {
   siteMetadata: {
     title: 'Herding Coders',
+    siteUrl: `https://www.herdingcoders.com`,
   },
   pathPrefix: '/gatsby-contentful-starter',
   plugins: [
     'gatsby-transformer-remark',
     'gatsby-transformer-sharp',
     'gatsby-plugin-react-helmet',
+    'gatsby-plugin-sitemap',
     'gatsby-plugin-sharp',
     {
       resolve: 'gatsby-source-contentful',
