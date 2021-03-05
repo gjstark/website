@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 969 178" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-2725.69,0)">
+        <g id="Long-logo-name-light" serif:id="Long logo name light" transform="matrix(1.20603,0,0,0.644395,2541.62,-103.392)">
+            <rect x="152.618" y="160.448" width="802.933" height="274.761" style="fill:none;"/>
+            <g transform="matrix(0.374001,0,0,0.699971,314.656,-407.443)">
+                <text x="443.714px" y="1062.07px" style="font-family:'Futura-Bold', 'Futura', sans-serif;font-weight:700;font-size:150px;fill:rgb(250,190,88);">Her<tspan x="736.514px 841.664px " y="1062.07px 1062.07px ">di</tspan>ng</text>
+            </g>
+            <g transform="matrix(0.374001,0,0,0.699971,568.461,-401.091)">
+                <text x="443.714px" y="1062.07px" style="font-family:'Futura-Bold', 'Futura', sans-serif;font-weight:700;font-size:150px;fill:rgb(250,190,88);">Coder<tspan x="920.414px " y="1062.07px ">s</tspan></text>
+            </g>
+            <g transform="matrix(0.829166,0,0,1.55184,-189.213,-950.931)">
+                <path d="M511.285,764.416L439.485,798.615L439.598,810.354L511.544,845.152L511.665,830.118L456.881,804.972L510.996,779.606L511.285,764.416Z" style="fill:rgb(226,83,33);"/>
+            </g>
+            <g transform="matrix(-0.829166,0,0,1.55184,831.456,-947.37)">
+                <path d="M511.285,764.416L439.485,798.615L439.598,810.354L511.544,845.152L511.665,830.118L456.881,804.972L510.996,779.606L511.285,764.416Z" style="fill:rgb(61,187,226);"/>
+            </g>
+            <g transform="matrix(0.829166,0,0,1.55184,-1353.78,-936.099)">
+                <path d="M1961.55,723.379L1977.01,723.486L1925.93,866.681L1909.93,866.681L1961.55,723.379Z" style="fill:rgb(125,186,56);"/>
+            </g>
+            <g transform="matrix(0.600244,0,0,1.1234,72.3793,-836.429)">
+                <text x="443.714px" y="1062.07px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:150px;fill:rgb(250,190,88);">C</text>
+            </g>
+            <g transform="matrix(0.600244,0,0,1.1234,9.80348,-838.486)">
+                <text x="443.714px" y="1062.07px" style="font-family:'Arial-BoldMT', 'Arial', sans-serif;font-weight:700;font-size:150px;fill:rgb(250,190,88);">H</text>
+            </g>
+        </g>
+    </g>
+</svg>
