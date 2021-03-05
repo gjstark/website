@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import styles from './navigation.module.css'
+//import styles from './navigation.module.css'
 import {Navbar, Nav, NavDropdown} from 'react-bootstrap';
 
 export default () => (
@@ -14,7 +14,7 @@ export default () => (
       </li>
     </ul> */}
     <Navbar expand="md" bg="dark" variant="dark">
-      <Navbar.Brand href="/" >
+      <Navbar.Brand href="/">
         <img
           src="/herdingcoders_logo.svg"
           width="60"
@@ -22,7 +22,6 @@ export default () => (
           className="d-inline-block align-top"
           alt="Herding Coders"
         />
-      
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="navBarResponsive" />
       <Navbar.Collapse id="navBarResponsive">
