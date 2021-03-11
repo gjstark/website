@@ -15,6 +15,7 @@ exports.createPages = ({ graphql, actions }) => {
                 node {
                   title
                   slug
+                  posttype
                 }
               }
             }
@@ -28,13 +29,29 @@ exports.createPages = ({ graphql, actions }) => {
 
         const posts = result.data.allContentfulBlogPost.edges
         posts.forEach((post, index) => {
-          createPage({
-            path: `/blog/${post.node.slug}/`,
-            component: blogPost,
-            context: {
-              slug: post.node.slug
-            },
-          })
+          console.log(post.node.posttype)
+          if (post.node.posttype == "service")
+          {
+            console.log('creating service')
+            createPage({
+              path: `/services/${post.node.slug}/`,
+              component: blogPost,
+              context: {
+                slug: post.node.slug
+              },
+            })
+          }
+          else
+          {
+            console.log('creating blog')
+            createPage({
+              path: `/blog/${post.node.slug}/`,
+              component: blogPost,
+              context: {
+                slug: post.node.slug
+              },
+            })
+          }
         })
       })
     )

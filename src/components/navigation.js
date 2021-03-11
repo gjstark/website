@@ -41,36 +41,41 @@ export default () => (
               Blog
             </Link>
           </Nav.Item>
-          {/* <NavDropdown title="Services" id="nav-dropdown">
+           <NavDropdown title="Services" id="nav-dropdown">
             <NavDropdown.Item >
-              <Link to="/blog" >
+              <Link to="/services/engineering-team-services" >
               Engineering team services
               </Link>
             </NavDropdown.Item>
             <NavDropdown.Item >
-              <Link to="/blog" >
-                Business analysis services
+              <Link to="/services/business-analysis-services" >
+                Business Analysis services
               </Link>
             </NavDropdown.Item>
             <NavDropdown.Item >
-              <Link to="/blog" >
+              <Link to="/services/solution-design-services" >
+                Solution Design services
+              </Link>
+            </NavDropdown.Item>
+            <NavDropdown.Item >
+               <Link to="/services/quality-services" >
                 Quality services
               </Link>
             </NavDropdown.Item>
 
             <NavDropdown.Item >
-              <Link to="/blog" >
+               <Link to="/services/delivery-services" >
                 Delivery services
               </Link>
             </NavDropdown.Item>
 
           </NavDropdown>
 
-          <Nav.Item as="li">
+          {/* <Nav.Item as="li">
             <Link to="/contact" className="nav-link" activeClassName="active">
               Contact
             </Link>
-          </Nav.Item> */}
+          </Nav.Item>  */}
 
         </Nav>
       </Navbar.Collapse>

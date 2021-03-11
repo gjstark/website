@@ -45,7 +45,7 @@ export const pageQuery = graphql`
         title
       }
     }
-    allContentfulBlogPost(sort: { fields: [publishDate], order: DESC }) {
+    allContentfulBlogPost(filter: {posttype: {ne: "service"}}, sort: { fields: [publishDate], order: DESC }) {
       edges {
         node {
           title
