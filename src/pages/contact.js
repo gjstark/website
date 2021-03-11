@@ -20,6 +20,7 @@ const ContactPage = () => (
 
 
         <form method="POST" name="Contact" action="/thankyou/" data-netlify="true">
+        <input type="hidden" name="form-name" value="Contact" />
         <p>
             <label for="name">Name:</label>
             <input type="text" name="name" id="name"/>
