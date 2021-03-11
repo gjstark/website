@@ -18,8 +18,8 @@ const ContactPage = () => (
         <h2>Contact Form</h2> 
             Please use the below form to contact us for any enquires you may have. 
 
-            
-        <form method="post" name="Contact Form" netlify>
+
+        <form method="post" name="Contact Form" data-netlify="true">
         <p>
             <label for="name">Name:</label>
             <input type="text" name="name" id="name"/>
