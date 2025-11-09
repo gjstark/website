@@ -15,18 +15,24 @@ Updated `package.json` with correct versions:
 - ✅ Added missing `gatsby-plugin-google-analytics`: **^5.13.1** (was in config but not installed)
 
 ### 2. Fixed ajv Module Conflict
-Added `ajv` and `ajv-keywords` as **explicit devDependencies with pinned versions**:
+Added `ajv` and `ajv-keywords` as **explicit devDependencies with pinned versions**, plus **resolutions for yarn**:
 ```json
 "devDependencies": {
   "ajv": "6.12.6",
   "ajv-keywords": "3.5.2",
   ...
 },
+"resolutions": {
+  "ajv": "6.12.6",
+  "ajv-keywords": "3.5.2"
+},
 "overrides": {
   "ajv": "6.12.6",
   "ajv-keywords": "3.5.2"
 }
 ```
+**Critical:** Netlify uses **yarn** for builds, not npm. Yarn requires `resolutions` field (npm uses `overrides`). Both are included for compatibility.
+
 This resolves multiple ajv-related errors:
 - "Cannot find module 'ajv/dist/compile/codegen'" 
 - "Unknown keyword formatMinimum"
