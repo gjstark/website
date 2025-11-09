@@ -37,6 +37,10 @@
     "gh-pages": "^6.2.0",
     "prettier": "^3.3.3"
   },
+  "overrides": {
+    "ajv": "8.17.1",
+    "ajv-keywords": "5.1.0"
+  },
   "homepage": "https://github.com/contentful-userland/gatsby-contentful-starter#readme",
   "keywords": [
     "gatsby",
