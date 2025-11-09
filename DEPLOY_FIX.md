@@ -14,14 +14,29 @@ Updated `package.json` with correct versions:
 - ✅ `contentful-export`: ^7.19.95 → **^7.21.98** (correct latest version)
 - ✅ Added missing `gatsby-plugin-google-analytics`: **^5.13.1** (was in config but not installed)
 
-### 2. Added `.npmrc` Configuration
+### 2. Fixed ajv Module Conflict
+Added `overrides` to `package.json` to force compatible versions:
+```json
+"overrides": {
+  "ajv": "^8.12.0",
+  "ajv-keywords": "^5.1.0"
+}
+```
+This resolves the "Cannot find module 'ajv/dist/compile/codegen'" error during webpack bundling.
+
+### 3. Updated GraphQL Sort Syntax
+Updated GraphQL queries in `src/pages/blog.js` and `src/pages/index.js` to use the new Gatsby 5 sort syntax:
+- Old: `sort: { fields: [publishDate], order: DESC }`
+- New: `sort: { publishDate: DESC }`
+
+### 4. Added `.npmrc` Configuration
 Created `.npmrc` file with:
 ```
 legacy-peer-deps=true
 ```
 This handles peer dependency conflicts between Gatsby 5 and React 18 during the build process.
 
-### 3. Added `.nvmrc` File
+### 5. Added `.nvmrc` File
 Created `.nvmrc` specifying Node.js 18, which Netlify will automatically detect and use.
 
 ## Files Changed
