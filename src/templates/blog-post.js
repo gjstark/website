@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
-import Img from 'gatsby-image'
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
@@ -13,6 +13,7 @@ class BlogPostTemplate extends React.Component {
     const post = get(this.props, 'data.contentfulBlogPost')
     const siteTitle = get(this.props, 'data.site.siteMetadata.title')
     const description = get(this.props, 'data.contentfulBlogPost.description')
+    const heroImage = getImage(post.heroImage)
 
 
     return (
@@ -22,14 +23,14 @@ class BlogPostTemplate extends React.Component {
           <SEO
             title={`${post.title} | ${siteTitle}`}
             description={post.description.childMarkdownRemark.html}
-            image={post.heroImage.fluid}
+            image={post.heroImage}
             pathname={this.props.location.pathname}
           />
 
 
 
           <div className={heroStyles.hero}>
-            <Img className={heroStyles.heroImage} alt={post.title} fluid={post.heroImage.fluid} />
+            {heroImage && <GatsbyImage className={heroStyles.heroImage} image={heroImage} alt={post.title} />}
           </div>
           <div className="wrapper">
             <h1 className="section-headline">{post.title}</h1>
@@ -65,9 +66,11 @@ export const pageQuery = graphql`
       title
       publishDate(formatString: "MMMM Do, YYYY")
       heroImage {
-        fluid(maxWidth: 1180, background: "rgb:000000") {
-          ...GatsbyContentfulFluid
-        }
+        gatsbyImageData(
+          width: 1180
+          placeholder: BLURRED
+          formats: [AUTO, WEBP]
+        )
       }
       description {
         childMarkdownRemark {

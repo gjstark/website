@@ -6,34 +6,35 @@
   "bugs": {
     "url": "https://github.com/contentful-userland/gatsby-contentful-starter/issues"
   },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
   "dependencies": {
-    "bootstrap": "^4.6.0",
-    "contentful-export": "^7.9.22",
-    "contentful-import": "^7.8.6",
-    "gatsby-image": "^2.0.38",
-    "gatsby-plugin-google-analytics": "^2.3.6",
-    "gatsby-plugin-react-helmet": "^3.0.12",
-    "gatsby-plugin-sharp": "^2.0.34",
-    "gatsby-plugin-sitemap": "^2.4.12",
-    "gatsby-source-contentful": "^2.0.48",
-    "gatsby-transformer-remark": "^5.25.1",
-    "gatsby-transformer-sharp": "^2.1.18",
+    "bootstrap": "^5.3.3",
+    "contentful-export": "^7.19.95",
+    "contentful-import": "^8.7.11",
+    "gatsby-plugin-image": "^3.13.1",
+    "gatsby-plugin-react-helmet": "^6.13.1",
+    "gatsby-plugin-sharp": "^5.13.1",
+    "gatsby-plugin-sitemap": "^6.13.1",
+    "gatsby-source-contentful": "^8.13.2",
+    "gatsby-transformer-remark": "^6.13.1",
+    "gatsby-transformer-sharp": "^5.13.1",
     "lodash": "^4.17.21",
-    "react": "^16.8.6",
-    "react-bootstrap": "^1.5.1",
-    "react-dom": "^16.8.6",
-    "react-helmet": "^5.2.0",
-    "sharp": "^0.22.0"
+    "react": "^18.3.1",
+    "react-bootstrap": "^2.10.5",
+    "react-dom": "^18.3.1",
+    "react-helmet": "^6.1.0"
   },
   "devDependencies": {
-    "babel-eslint": "^10.0.1",
-    "dotenv": "^8.0.0",
-    "eslint": "^5.16.0",
-    "eslint-plugin-react": "^7.12.4",
-    "gatsby": "^4.25.7",
-    "gh-pages": "^2.0.1",
-    "prettier": "^1.17.0",
-    "yargs-parser": "^13.0.0"
+    "@babel/eslint-parser": "^7.25.9",
+    "dotenv": "^16.4.5",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react": "^7.37.2",
+    "gatsby": "^5.13.7",
+    "gh-pages": "^6.2.0",
+    "prettier": "^3.3.3"
   },
   "homepage": "https://github.com/contentful-userland/gatsby-contentful-starter#readme",
   "keywords": [
@@ -54,7 +55,7 @@
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md' 'bin/*.js'",
     "build": "gatsby build",
     "deploy": "gatsby build --prefix-paths && gh-pages -d public",
-    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix *.js bin/*.js",
+    "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser @babel/eslint-parser --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix *.js bin/*.js",
     "postinstall": "node ./bin/hello.js",
     "setup": "node ./bin/setup.js",
     "start": "npm run develop",

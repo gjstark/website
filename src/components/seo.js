@@ -2,6 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import { getSrc } from "gatsby-plugin-image"
 
 function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
   const { site } = useStaticQuery(
@@ -19,14 +20,27 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
 
  
   const metaDescription = description || site.siteMetadata.description
-  const image =
-    metaImage && metaImage.src
-      ? `${'http:'}${metaImage.src}`
-      : null
+  
+  // Handle both old and new image formats
+  let image = null
+  let imageWidth = 1200
+  let imageHeight = 630
+  
+  if (metaImage) {
+    if (metaImage.gatsbyImageData) {
+      // New format - use getSrc to get the URL
+      const imageSrc = getSrc(metaImage)
+      image = imageSrc ? `https:${imageSrc}` : null
+      imageWidth = metaImage.gatsbyImageData.width || 1200
+      imageHeight = metaImage.gatsbyImageData.height || 630
+    } else if (metaImage.src) {
+      // Old format fallback
+      image = `http:${metaImage.src}`
+      imageWidth = metaImage.width
+      imageHeight = metaImage.height
+    }
+  }
 
-      // Removed the siteurl and left http:
-      //? `${site.siteMetadata.siteUrl}${metaImage.src}`
-      //: null
   const canonical = pathname ? `${site.siteMetadata.siteUrl}${pathname}` : null
 
   return (
@@ -82,7 +96,7 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
         },
       ]
         .concat(
-          metaImage
+          image
             ? [
                 {
                   property: "og:image",
@@ -90,11 +104,11 @@ function SEO({ description, lang, meta, image: metaImage, title, pathname }) {
                 },
                 {
                   property: "og:image:width",
-                  content: metaImage.width,
+                  content: imageWidth,
                 },
                 {
                   property: "og:image:height",
-                  content: metaImage.height,
+                  content: imageHeight,
                 },
                 {
                   name: "twitter:card",
@@ -124,11 +138,7 @@ SEO.propTypes = {
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
   title: PropTypes.string.isRequired,
-  image: PropTypes.shape({
-    src: PropTypes.string.isRequired,
-    height: PropTypes.number.isRequired,
-    width: PropTypes.number.isRequired,
-  }),
+  image: PropTypes.object,
   pathname: PropTypes.string,
 }
 

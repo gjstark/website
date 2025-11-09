@@ -53,9 +53,12 @@ export const pageQuery = graphql`
           publishDate(formatString: "MMMM Do, YYYY")
           tags
           heroImage {
-            fluid(maxWidth: 350, maxHeight: 196, resizingBehavior: SCALE) {
-             ...GatsbyContentfulFluid
-            }
+            gatsbyImageData(
+              width: 350
+              aspectRatio: 1.78
+              placeholder: BLURRED
+              formats: [AUTO, WEBP]
+            )
           }
           description {
             childMarkdownRemark {
@@ -74,14 +77,12 @@ export const pageQuery = graphql`
           }
           title
           heroImage: image {
-            fluid(
-              maxWidth: 1180
-              maxHeight: 480
-              resizingBehavior: SCALE
-              background: "rgb:000000"
-            ) {
-              ...GatsbyContentfulFluid
-            }
+            gatsbyImageData(
+              width: 1180
+              aspectRatio: 2.46
+              placeholder: BLURRED
+              formats: [AUTO, WEBP]
+            )
           }
         }
       }
