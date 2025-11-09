@@ -12,6 +12,7 @@ npm error notarget No matching version found for contentful-import@^8.7.11
 Updated `package.json` with correct versions:
 - ✅ `contentful-import`: ^8.7.11 → **^9.4.127** (correct latest version)
 - ✅ `contentful-export`: ^7.19.95 → **^7.21.98** (correct latest version)
+- ✅ Added missing `gatsby-plugin-google-analytics`: **^5.13.1** (was in config but not installed)
 
 ### 2. Added `.npmrc` Configuration
 Created `.npmrc` file with:
