@@ -15,14 +15,18 @@ Updated `package.json` with correct versions:
 - ✅ Added missing `gatsby-plugin-google-analytics`: **^5.13.1** (was in config but not installed)
 
 ### 2. Fixed ajv Module Conflict
-Added `overrides` to `package.json` to force compatible versions:
+Added `overrides` to `package.json` to force compatible versions with webpack tooling:
 ```json
 "overrides": {
-  "ajv": "^8.12.0",
-  "ajv-keywords": "^5.1.0"
+  "ajv": "^6.12.6",
+  "ajv-keywords": "^3.5.2"
 }
 ```
-This resolves the "Cannot find module 'ajv/dist/compile/codegen'" error during webpack bundling.
+This resolves multiple ajv-related errors:
+- "Cannot find module 'ajv/dist/compile/codegen'" 
+- "Unknown keyword formatMinimum"
+
+Uses ajv v6 with ajv-keywords v3 for compatibility with babel-loader and schema-utils used by Gatsby 5.
 
 ### 3. Updated GraphQL Sort Syntax
 Updated GraphQL queries in `src/pages/blog.js` and `src/pages/index.js` to use the new Gatsby 5 sort syntax:
