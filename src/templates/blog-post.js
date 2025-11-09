@@ -6,7 +6,7 @@ import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-import heroStyles from '../components/hero.module.css'
+import * as heroStyles from '../components/hero.module.css'
 
 class BlogPostTemplate extends React.Component {
   render() {
