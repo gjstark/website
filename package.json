@@ -38,6 +38,8 @@
     "prettier": "^3.3.3"
   },
   "overrides": {
+    "ajv": "6.12.6",
+    "ajv-keywords": "3.5.2",
     "schema-utils": "3.1.1"
   },
   "homepage": "https://github.com/contentful-userland/gatsby-contentful-starter#readme",
