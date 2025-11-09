@@ -11,6 +11,10 @@ This project has been updated from outdated dependencies to modern versions. Bel
 - **Bootstrap**: Upgraded from 4.6.0 → 5.3.3
 - **React Bootstrap**: Upgraded from 1.5.1 → 2.10.5
 
+### Contentful Packages
+- `contentful-export`: ^7.21.98
+- `contentful-import`: ^9.4.127
+
 ### Gatsby Plugins
 All Gatsby plugins have been updated to v5+ versions compatible with Gatsby 5:
 - `gatsby-plugin-image`: ^3.13.1 (NEW - replaces deprecated gatsby-image)
@@ -132,10 +136,37 @@ All GraphQL queries have been updated to use `gatsbyImageData` instead of `fluid
 
 3. **Environment Variables**: Ensure your `.env` files are properly configured with Contentful credentials.
 
+## Netlify Deployment
+
+The project is configured for easy deployment on Netlify:
+
+1. **Node.js Version**: The `.nvmrc` file specifies Node.js 18, which Netlify will automatically detect.
+
+2. **Peer Dependencies**: An `.npmrc` file has been added with `legacy-peer-deps=true` to handle peer dependency conflicts during the build. This is necessary because Gatsby 5 has some peer dependency requirements that conflict with React 18.
+
+3. **Build Command**: Use `gatsby build` or `npm run build`
+
+4. **Publish Directory**: `public`
+
+### Troubleshooting Netlify Builds
+
+If you encounter build errors on Netlify:
+
+1. **Check Node Version**: Ensure Netlify is using Node.js 18+. The `.nvmrc` file should handle this automatically.
+
+2. **Clear Build Cache**: If you're getting caching-related errors:
+   - Go to Site Settings → Build & Deploy → Build Settings
+   - Click "Clear cache and retry deploy"
+
+3. **Environment Variables**: Make sure your Contentful credentials are set in Netlify:
+   - Go to Site Settings → Environment Variables
+   - Add: `CONTENTFUL_SPACE_ID`, `CONTENTFUL_ACCESS_TOKEN`, and optionally `CONTENTFUL_HOST`
+
 ## Resources
 
 - [Gatsby 5 Release Notes](https://www.gatsbyjs.com/docs/reference/release-notes/v5.0/)
 - [Migrating to gatsby-plugin-image](https://www.gatsbyjs.com/docs/reference/release-notes/image-migration-guide/)
 - [Bootstrap 5 Migration Guide](https://getbootstrap.com/docs/5.3/migration/)
 - [React 18 Upgrade Guide](https://react.dev/blog/2022/03/08/react-18-upgrade-guide)
+- [Netlify Build Configuration](https://docs.netlify.com/configure-builds/overview/)
 

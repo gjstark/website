@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
-    "contentful-export": "^7.19.95",
-    "contentful-import": "^8.7.11",
+    "contentful-export": "^7.21.98",
+    "contentful-import": "^9.4.127",
     "gatsby-plugin-image": "^3.13.1",
     "gatsby-plugin-react-helmet": "^6.13.1",
     "gatsby-plugin-sharp": "^5.13.1",
