@@ -36,7 +36,7 @@ export default () => (
               About
             </Link>
           </Nav.Item> */}
-          
+
            <NavDropdown title="Services" id="nav-dropdown" >
             <NavDropdown.Item >
               <Link to="/services/engineering-team-services" >
@@ -65,6 +65,14 @@ export default () => (
               </Link>
             </NavDropdown.Item>
 
+          </NavDropdown>
+
+          <NavDropdown title="Software" id="nav-dropdown-software" >
+            <NavDropdown.Item >
+              <Link to="/pixelpomodoro" >
+                Pixel Pomodoro
+              </Link>
+            </NavDropdown.Item>
           </NavDropdown>
           <Nav.Item as="li">
             <Link to="/blog" className="nav-link" activeClassName="active">
