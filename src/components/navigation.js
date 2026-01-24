@@ -73,6 +73,11 @@ export default () => (
                 Pixel Pomodoro
               </Link>
             </NavDropdown.Item>
+            <NavDropdown.Item >
+              <Link to="/melodia" >
+                Melodia
+              </Link>
+            </NavDropdown.Item>
           </NavDropdown>
           <Nav.Item as="li">
             <Link to="/blog" className="nav-link" activeClassName="active">
