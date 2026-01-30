@@ -49,7 +49,7 @@ const PixelPomodoro = () => {
   }, [])
 
   return (
-    <Layout>
+    <Layout hideNav={true} hideFooter={true}>
       <Helmet>
         <title>Pixel Pomodoro - Retro 8-Bit Focus Timer</title>
         <meta name="description" content="Level up your productivity with Pixel Pomodoro - a retro 8-bit style Pomodoro timer app with multiple nostalgic themes." />
@@ -77,6 +77,38 @@ const PixelPomodoro = () => {
             overflow-x: hidden;
             line-height: 1.8;
             position: relative;
+          }
+
+          .back-to-site {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 8px;
+            color: var(--text);
+            background: rgba(13, 2, 33, 0.9);
+            border: 2px solid var(--cyan);
+            text-decoration: none;
+            z-index: 100;
+            transition: all 0.3s ease;
+          }
+
+          .back-to-site:hover {
+            background: var(--cyan);
+            color: var(--bg-dark);
+            box-shadow: 0 0 20px var(--cyan);
+          }
+
+          .back-to-site svg {
+            transition: transform 0.3s ease;
+          }
+
+          .back-to-site:hover svg {
+            transform: translateX(-4px);
           }
 
           .scanlines {
@@ -535,6 +567,14 @@ const PixelPomodoro = () => {
         <div className="scanlines"></div>
         <div className="grid-bg"></div>
         <div className="gradient-overlay"></div>
+
+        <Link to="/" className="back-to-site">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          Back to Herding Coders
+        </Link>
 
         <section className="hero">
           <h1 className="hero-title">PIXEL POMODORO</h1>

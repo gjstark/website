@@ -21,7 +21,7 @@ const Melodia = () => {
   }, []);
 
   return (
-    <Layout>
+    <Layout hideNav={true} hideFooter={true}>
       <Helmet>
         <title>Melodia - Your Daily Habit Companion</title>
         <meta name="description" content="Track your daily habits, monitor health metrics, and journal your progress. Melodia helps you stay consistent and reach your goals—all while keeping your data private." />
@@ -62,6 +62,41 @@ const Melodia = () => {
 
           .melodia-page * {
             box-sizing: border-box;
+          }
+
+          .back-to-site {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 18px;
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            background: rgba(15, 15, 26, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            text-decoration: none;
+            z-index: 100;
+            transition: all 0.3s ease;
+          }
+
+          .back-to-site:hover {
+            background: rgba(99, 102, 241, 0.2);
+            border-color: var(--primary);
+            color: var(--text-primary);
+          }
+
+          .back-to-site svg {
+            transition: transform 0.3s ease;
+          }
+
+          .back-to-site:hover svg {
+            transform: translateX(-4px);
           }
 
           /* Melodia Page Navigation */
@@ -660,6 +695,14 @@ const Melodia = () => {
       <div className="melodia-page">
         <div className="melodia-page-bg"></div>
         <div className="bg-gradient"></div>
+
+        <Link to="/" className="back-to-site">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          Back to Herding Coders
+        </Link>
 
         {/* Melodia Page Navigation */}
         <nav className="melodia-nav">
