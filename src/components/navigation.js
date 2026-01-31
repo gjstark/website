@@ -36,6 +36,7 @@ const Navigation = () => {
   const software = [
     { name: 'Pixel Pomodoro', path: '/pixelpomodoro', description: 'Retro 8-bit focus timer' },
     { name: 'Melodia', path: '/melodia', description: 'Daily habit tracker' },
+    { name: 'DevNotesPlus', path: '/devnotesplus', description: 'Release notes generator' },
   ]
 
   const handleMouseEnter = (name) => {

@@ -4,6 +4,17 @@ import { Link } from 'gatsby'
 const SoftwareSection = () => {
   const products = [
     {
+      name: 'DevNotesPlus',
+      tagline: 'Beautiful release notes for developers',
+      description: 'Generate stunning, embeddable changelogs for your software. Keep users informed with a powerful API.',
+      icon: '📋',
+      link: '/devnotesplus',
+      gradient: 'linear-gradient(135deg, #10b981 0%, #06b6d4 100%)',
+      bgGlow: 'rgba(16, 185, 129, 0.15)',
+      features: ['REST API', 'Embeddable Widgets', 'Version Management'],
+      status: 'Available'
+    },
+    {
       name: 'Pixel Pomodoro',
       tagline: 'Level up your productivity',
       description: 'A retro 8-bit style Pomodoro timer app with multiple nostalgic themes. Master your focus with science-backed time management.',
@@ -23,7 +34,7 @@ const SoftwareSection = () => {
       gradient: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
       bgGlow: 'rgba(99, 102, 241, 0.15)',
       features: ['Habit Tracking', 'Health Metrics', 'Daily Notes'],
-      status: 'Available'
+      status: 'Coming Soon'
     }
   ]
 
