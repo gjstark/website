@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { Link } from 'gatsby'
 import Helmet from 'react-helmet'
 import Layout from '../components/layout'
+import ReleaseNotesButton from '../components/ReleaseNotesButton'
 
 const PixelPomodoro = () => {
   useEffect(() => {
@@ -575,6 +576,13 @@ const PixelPomodoro = () => {
           </svg>
           Back to Herding Coders
         </Link>
+
+        <ReleaseNotesButton
+          apiUrl="https://www.devnotesplus.com"
+          packageId="8e1fd678-9a3a-445c-92fa-dc2d08de40ea"
+          fullNotesUrl="https://www.devnotesplus.com/public/packages/pixel-pomodoro-8e1fd678.html"
+          showBadge={true}
+        />
 
         <section className="hero">
           <h1 className="hero-title">PIXEL POMODORO</h1>
