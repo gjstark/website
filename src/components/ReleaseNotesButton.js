@@ -9,6 +9,7 @@ import React, { useState, useEffect, useCallback } from 'react'
  * @param {string} fullNotesUrl - URL to view full release notes externally
  * @param {string} apiKey - Optional API key for private packages (passed as Bearer token)
  * @param {boolean} showBadge - Whether to show the "NEW" badge indicator
+ * @param {string} variant - Style variant: "retro" (pixel art) or "modern" (clean)
  * @param {object} theme - Theme configuration (uses CSS variables from parent by default)
  */
 const ReleaseNotesButton = ({
@@ -17,6 +18,7 @@ const ReleaseNotesButton = ({
   fullNotesUrl,
   apiKey,
   showBadge = true,
+  variant = 'retro',
   theme = {}
 }) => {
   const [isOpen, setIsOpen] = useState(false)
@@ -159,6 +161,8 @@ const ReleaseNotesButton = ({
     return div.innerHTML
   }
 
+  const isModern = variant === 'modern'
+
   return (
     <>
       <style>{`
@@ -193,6 +197,25 @@ const ReleaseNotesButton = ({
           background: var(--rn-cyan);
           color: var(--rn-bg-dark);
           box-shadow: 0 0 20px var(--rn-cyan);
+        }
+
+        /* Modern variant styles */
+        .rn-button.rn-modern {
+          font-family: 'Inter', -apple-system, sans-serif;
+          font-size: 0.85rem;
+          font-weight: 500;
+          padding: 10px 18px;
+          border-radius: 8px;
+          border: 1px solid var(--rn-primary);
+          background: rgba(10, 15, 13, 0.9);
+          backdrop-filter: blur(10px);
+        }
+
+        .rn-button.rn-modern:hover {
+          background: rgba(16, 185, 129, 0.15);
+          border-color: var(--rn-primary);
+          color: var(--rn-primary);
+          box-shadow: 0 0 20px rgba(16, 185, 129, 0.2);
         }
 
         .rn-button-badge {
@@ -244,6 +267,15 @@ const ReleaseNotesButton = ({
             0 0 60px rgba(255, 42, 109, 0.2);
         }
 
+        /* Modern modal styles */
+        .rn-modal.rn-modern {
+          border: 1px solid var(--rn-primary);
+          border-radius: 16px;
+          box-shadow: 
+            0 25px 80px rgba(0, 0, 0, 0.5),
+            0 0 60px rgba(16, 185, 129, 0.15);
+        }
+
         @keyframes rn-slide-up {
           from { 
             opacity: 0;
@@ -264,6 +296,11 @@ const ReleaseNotesButton = ({
           background: var(--rn-bg-dark);
         }
 
+        .rn-modern .rn-modal-header {
+          border-bottom: 1px solid rgba(16, 185, 129, 0.2);
+          border-radius: 16px 16px 0 0;
+        }
+
         .rn-modal-title {
           font-family: 'Press Start 2P', monospace;
           font-size: 12px;
@@ -272,6 +309,13 @@ const ReleaseNotesButton = ({
           align-items: center;
           gap: 10px;
           margin: 0;
+        }
+
+        .rn-modern .rn-modal-title {
+          font-family: 'Inter', -apple-system, sans-serif;
+          font-size: 1.1rem;
+          font-weight: 600;
+          color: var(--rn-text);
         }
 
         .rn-modal-close {
@@ -289,10 +333,24 @@ const ReleaseNotesButton = ({
           justify-content: center;
         }
 
+        .rn-modern .rn-modal-close {
+          font-family: 'Inter', -apple-system, sans-serif;
+          font-size: 1.25rem;
+          border: 1px solid rgba(16, 185, 129, 0.3);
+          border-radius: 8px;
+          width: 36px;
+          height: 36px;
+        }
+
         .rn-modal-close:hover {
           border-color: var(--rn-primary);
           color: var(--rn-primary);
           box-shadow: 0 0 10px var(--rn-primary);
+        }
+
+        .rn-modern .rn-modal-close:hover {
+          background: rgba(16, 185, 129, 0.1);
+          box-shadow: none;
         }
 
         .rn-modal-content {
@@ -343,6 +401,11 @@ const ReleaseNotesButton = ({
           color: var(--rn-text-dim);
         }
 
+        .rn-modern .rn-loading-text {
+          font-family: 'Inter', -apple-system, sans-serif;
+          font-size: 0.9rem;
+        }
+
         .rn-error {
           text-align: center;
           padding: 40px;
@@ -361,6 +424,11 @@ const ReleaseNotesButton = ({
           line-height: 1.8;
         }
 
+        .rn-modern .rn-error-message {
+          font-family: 'Inter', -apple-system, sans-serif;
+          font-size: 0.95rem;
+        }
+
         .rn-retry-btn {
           font-family: 'Press Start 2P', monospace;
           font-size: 10px;
@@ -372,15 +440,33 @@ const ReleaseNotesButton = ({
           transition: all 0.2s ease;
         }
 
+        .rn-modern .rn-retry-btn {
+          font-family: 'Inter', -apple-system, sans-serif;
+          font-size: 0.9rem;
+          font-weight: 500;
+          padding: 12px 24px;
+          border: 1px solid var(--rn-primary);
+          border-radius: 8px;
+        }
+
         .rn-retry-btn:hover {
           background: var(--rn-cyan);
           color: var(--rn-bg-dark);
+        }
+
+        .rn-modern .rn-retry-btn:hover {
+          background: rgba(16, 185, 129, 0.15);
+          color: var(--rn-primary);
         }
 
         .rn-release {
           margin-bottom: 30px;
           padding-bottom: 30px;
           border-bottom: 1px dashed var(--rn-text-dim);
+        }
+
+        .rn-modern .rn-release {
+          border-bottom: 1px solid rgba(16, 185, 129, 0.15);
         }
 
         .rn-release:last-child {
@@ -404,10 +490,23 @@ const ReleaseNotesButton = ({
           text-shadow: 0 0 10px var(--rn-cyan);
         }
 
+        .rn-modern .rn-release-version {
+          font-family: 'JetBrains Mono', 'Inter', monospace;
+          font-size: 1.25rem;
+          font-weight: 600;
+          color: var(--rn-primary);
+          text-shadow: none;
+        }
+
         .rn-release-date {
           font-family: 'Press Start 2P', monospace;
           font-size: 8px;
           color: var(--rn-text-dim);
+        }
+
+        .rn-modern .rn-release-date {
+          font-family: 'Inter', -apple-system, sans-serif;
+          font-size: 0.85rem;
         }
 
         .rn-release-type {
@@ -415,6 +514,15 @@ const ReleaseNotesButton = ({
           font-size: 8px;
           padding: 4px 8px;
           border: 2px solid currentColor;
+        }
+
+        .rn-modern .rn-release-type {
+          font-family: 'Inter', -apple-system, sans-serif;
+          font-size: 0.75rem;
+          font-weight: 600;
+          padding: 4px 10px;
+          border: 1px solid currentColor;
+          border-radius: 4px;
         }
 
         .rn-changes-list {
@@ -433,9 +541,20 @@ const ReleaseNotesButton = ({
           line-height: 1.8;
         }
 
+        .rn-modern .rn-change-item {
+          font-family: 'Inter', -apple-system, sans-serif;
+          font-size: 0.9rem;
+          line-height: 1.6;
+          padding: 8px 0;
+        }
+
         .rn-change-icon {
           flex-shrink: 0;
           font-size: 14px;
+        }
+
+        .rn-modern .rn-change-icon {
+          font-size: 1rem;
         }
 
         .rn-change-text {
@@ -446,6 +565,11 @@ const ReleaseNotesButton = ({
           padding: 20px;
           border-top: 2px solid var(--rn-text-dim);
           background: var(--rn-bg-dark);
+        }
+
+        .rn-modern .rn-modal-footer {
+          border-top: 1px solid rgba(16, 185, 129, 0.2);
+          border-radius: 0 0 16px 16px;
         }
 
         .rn-full-notes-link {
@@ -472,6 +596,22 @@ const ReleaseNotesButton = ({
             inset 4px 4px 0 rgba(255,255,255,0.2);
         }
 
+        .rn-modern .rn-full-notes-link {
+          font-family: 'Inter', -apple-system, sans-serif;
+          font-size: 0.9rem;
+          font-weight: 600;
+          padding: 12px 24px;
+          background: linear-gradient(135deg, var(--rn-primary) 0%, var(--rn-cyan) 100%);
+          color: var(--rn-bg-dark);
+          border-radius: 8px;
+          box-shadow: none;
+        }
+
+        .rn-modern .rn-full-notes-link:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 10px 30px rgba(16, 185, 129, 0.3);
+        }
+
         .rn-empty {
           text-align: center;
           padding: 40px;
@@ -479,6 +619,12 @@ const ReleaseNotesButton = ({
           font-size: 10px;
           color: var(--rn-text-dim);
           line-height: 2;
+        }
+
+        .rn-modern .rn-empty {
+          font-family: 'Inter', -apple-system, sans-serif;
+          font-size: 0.95rem;
+          line-height: 1.6;
         }
 
         @media (max-width: 768px) {
@@ -502,12 +648,12 @@ const ReleaseNotesButton = ({
       `}</style>
 
       <button 
-        className="rn-button"
+        className={`rn-button ${isModern ? 'rn-modern' : ''}`}
         onClick={handleOpen}
         aria-label="View release notes"
       >
         <span>📋</span>
-        <span>RELEASE NOTES</span>
+        <span>{isModern ? 'Release Notes' : 'RELEASE NOTES'}</span>
         {showBadge && <span className="rn-button-badge" />}
       </button>
 
@@ -519,11 +665,11 @@ const ReleaseNotesButton = ({
           aria-modal="true"
           aria-labelledby="rn-modal-title"
         >
-          <div className="rn-modal">
+          <div className={`rn-modal ${isModern ? 'rn-modern' : ''}`}>
             <div className="rn-modal-header">
               <h2 id="rn-modal-title" className="rn-modal-title">
                 <span>📦</span>
-                RELEASE NOTES
+                {isModern ? 'Release Notes' : 'RELEASE NOTES'}
               </h2>
               <button 
                 className="rn-modal-close"

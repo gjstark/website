@@ -17,7 +17,20 @@ const DevNotesPlus = () => {
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    // Load DevNotesPlus widget script
+    const script = document.createElement('script');
+    script.src = 'https://www.devnotesplus.com/widget.js';
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      // Clean up widget script
+      if (script.parentNode) {
+        script.parentNode.removeChild(script);
+      }
+    };
   }, []);
 
   return (
@@ -573,6 +586,23 @@ const DevNotesPlus = () => {
             margin-top: 2rem;
           }
 
+          /* Demo Section */
+          .demo-section {
+            padding: 6rem 5%;
+            position: relative;
+            z-index: 1;
+          }
+
+          .demo-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 2rem;
+            min-height: 300px;
+          }
+
           /* CTA Section */
           .cta-section {
             padding: 6rem 5%;
@@ -669,6 +699,7 @@ const DevNotesPlus = () => {
           </svg>
           Back to Herding Coders
         </Link>
+
 
         {/* Navigation */}
         <nav className="dnp-nav">
@@ -805,6 +836,23 @@ const DevNotesPlus = () => {
               &nbsp;&nbsp;.<span className="code-property">then</span>(res =&gt; res.<span className="code-property">json</span>())<br/>
               &nbsp;&nbsp;.<span className="code-property">then</span>(data =&gt; console.<span className="code-property">log</span>(data.releases));
             </div>
+          </div>
+        </section>
+
+        {/* Live Demo Section */}
+        <section className="demo-section" id="demo">
+          <div className="section-header">
+            <h2>See It In Action</h2>
+            <p>This is a live widget displaying real release notes from DevNotesPlus</p>
+          </div>
+          <div className="demo-container">
+            <div 
+              id="devnotesplus-widget"
+              data-package-id="64d737d9-e4d0-4f59-b6f0-fed01ee28fd1"
+              data-theme="dark"
+              data-limit="5"
+              data-show-title="true"
+            />
           </div>
         </section>
 
