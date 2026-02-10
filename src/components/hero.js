@@ -372,12 +372,12 @@ const Hero = ({ data }) => {
               <span className="hero-title-highlight">Great Teams</span>
             </h1>
             
-            <p className="hero-description">
+        {/*     <p className="hero-description">
               I'm George Stark—a software leader passionate about delivering exceptional products 
               and empowering engineering teams. From strategy to execution, I help organizations 
               ship better software, faster.
             </p>
-            
+           */} 
             <div className="hero-stats">
               <div className="hero-stat">
                 <div className="hero-stat-value">20+</div>
