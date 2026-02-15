@@ -1,0 +1,262 @@
+{
+  "title": "Software Team Assessment",
+  "subtitle": "Assess your software engineering team across five key measures. For each measure, select the level that best describes your team. Scores are tallied automatically.",
+  "ratings": [
+    { "min": 5, "max": 9, "label": "Needs Urgent Attention", "description": "Team has major issues that need urgent attention.", "color": "#ef4444" },
+    { "min": 10, "max": 14, "label": "Needs Attention", "description": "Team has areas that need attention.", "color": "#f59e0b" },
+    { "min": 15, "max": 20, "label": "Performing Well", "description": "Team is performing well.", "color": "#00d4aa" }
+  ],
+  "measures": [
+    {
+      "id": "communication",
+      "name": "Communication",
+      "description": "How well the team communicates with each other. Excellent communication increases the effectiveness of a team.",
+      "levels": [
+        {
+          "score": 1,
+          "label": "Low",
+          "bullets": [
+            "People don't communicate with each other and work mostly in silos.",
+            "People use meetings to communicate with their teammates.",
+            "Personal information is not shared, and people don't understand their peer's motivation.",
+            "People don't know what their teammates are up to."
+          ]
+        },
+        {
+          "score": 2,
+          "label": "Medium",
+          "bullets": [
+            "People communicate via email / chat with their peers.",
+            "Face to face or phone conversations are rare.",
+            "People wait for meetings to talk to each other or raise important issues.",
+            "Personal information is not shared, and people don't understand their peer's motivation.",
+            "People don't know what their teammates are up to."
+          ]
+        },
+        {
+          "score": 3,
+          "label": "High",
+          "bullets": [
+            "Most communication is face to face / video / phone.",
+            "People are happy to pick up phone or walk up to desk for discussions / assistance as opposed to waiting for meetings.",
+            "Personal information may be shared along with personal motivations.",
+            "People mostly know what people are up to but may not know fully if those people have issues or the status of their work."
+          ]
+        },
+        {
+          "score": 4,
+          "label": "Excellent",
+          "bullets": [
+            "Most communication is face to face / video / phone.",
+            "People pick up phone or walk up to desk for discussions / assistance.",
+            "People don't wait for meetings to discuss important items.",
+            "Personal information is shared with knowledge around partners or children's names etc.",
+            "People's motivations are understood.",
+            "People are across each other's task status and problems."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "behavioural",
+      "name": "Behavioural",
+      "description": "Poor behaviour, bullying, and discrimination affect the performance of the team. This measure highlights potential issues that should be addressed.",
+      "levels": [
+        {
+          "score": 1,
+          "label": "Low",
+          "bullets": [
+            "Team members tolerate each other.",
+            "Workplace is sometimes calm, but disagreements can get loud and heated.",
+            "People have outbursts.",
+            "People of diverse backgrounds are welcome but not often heard as part of decision-making process with a few alpha-type people controlling these processes.",
+            "People don't respect their peers."
+          ]
+        },
+        {
+          "score": 2,
+          "label": "Medium",
+          "bullets": [
+            "Team members get along.",
+            "Workplace is mostly calm, but disagreements can get loud and heated.",
+            "People have outbursts rarely.",
+            "People of diverse backgrounds are welcome, and their voices are part of the decision-making process.",
+            "People mostly respect their peers."
+          ]
+        },
+        {
+          "score": 3,
+          "label": "High",
+          "bullets": [
+            "Team gets along well.",
+            "Workplace is calm.",
+            "Disagreements are mostly resolved in a calm and respectful manner.",
+            "People of diverse backgrounds are welcome, and their voices are part of the decision-making process.",
+            "People respect their peer's differences and abilities."
+          ]
+        },
+        {
+          "score": 4,
+          "label": "Excellent",
+          "bullets": [
+            "Team gets along well.",
+            "Workplace is always calm.",
+            "Disagreements are resolved in a respectful manner.",
+            "Diversity is seen as a benefit and used to improve innovation.",
+            "Everyone's voices are heard as part of the decision-making process.",
+            "People respect their peer's differences and abilities.",
+            "Team has low turn-over.",
+            "People feel safe and happy."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "delivery",
+      "name": "Delivery",
+      "description": "How the team delivers their software. Is software on time and works perfectly or is it late and full of bugs. This is an indicator of issues with process and quality.",
+      "levels": [
+        {
+          "score": 1,
+          "label": "Low",
+          "bullets": [
+            "Software delivery is always late.",
+            "Software delivered always has bugs and lots of them.",
+            "No visibility on people's tasks or status.",
+            "No documentation produced."
+          ]
+        },
+        {
+          "score": 2,
+          "label": "Medium",
+          "bullets": [
+            "Software delivery is mostly late. But sometimes on or near time.",
+            "Software delivered has lots of bugs and requires multiple patches.",
+            "We have a rough idea of what people are doing but no visibility on status.",
+            "No documentation produced."
+          ]
+        },
+        {
+          "score": 3,
+          "label": "High",
+          "bullets": [
+            "Software delivery is mostly on time.",
+            "Software delivered has few bugs. But sometimes we need a few patches to get things right.",
+            "We have a good idea of what people are working on and their status.",
+            "Some documentation produced."
+          ]
+        },
+        {
+          "score": 4,
+          "label": "Excellent",
+          "bullets": [
+            "Software delivery is always on time.",
+            "Software delivered is of very good quality consistently.",
+            "We have full visibility of people's tasks and status.",
+            "Great documentation produced with each release."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "resourcing",
+      "name": "Resourcing",
+      "description": "Resourcing has a great effect on the team. This measure looks at the resourcing of the team to determine if it's appropriate to deliver software effectively.",
+      "levels": [
+        {
+          "score": 1,
+          "label": "Low",
+          "bullets": [
+            "Team has one environment for development purposes.",
+            "Team constantly wastes time creating test databases / configuring environments for testing. No automation in place.",
+            "Team doesn't have adequate people to get the work done.",
+            "People wear multiple hats.",
+            "Team does not use software systems to manage their development."
+          ]
+        },
+        {
+          "score": 2,
+          "label": "Medium",
+          "bullets": [
+            "Team has environments for dev, test, production.",
+            "Team wastes some time creating test databases / configuring environments for testing.",
+            "Team doesn't have adequate people to get the work done.",
+            "People wear multiple hats.",
+            "Team does not use software systems to manage their development."
+          ]
+        },
+        {
+          "score": 3,
+          "label": "High",
+          "bullets": [
+            "Team has (similar) environments for dev, test, stage and production.",
+            "Limited time wasted in setting up test data / environments with some automation in place.",
+            "Team has adequate people to get the work done.",
+            "Team uses software systems to manage their development."
+          ]
+        },
+        {
+          "score": 4,
+          "label": "Excellent",
+          "bullets": [
+            "Team has (identical) environments for dev, test, stage and production.",
+            "Team automates creation of test data / environments where required.",
+            "Team uses automated testing to automate regression testing process.",
+            "Team has adequate people to get their work done.",
+            "Team uses software systems to manage their development."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "leadership",
+      "name": "Leadership",
+      "description": "Appropriate team leadership is required for an effective development team. This measure looks to make sure that the team has proper oversight and leadership in place.",
+      "levels": [
+        {
+          "score": 1,
+          "label": "Low",
+          "bullets": [
+            "Team does not have dedicated people in any of the key areas of (Dev, BA, QA, Release).",
+            "No responsibility defined, people using best efforts to get work done.",
+            "Team doesn't have a dedicated manager.",
+            "Team doesn't have regular stand-ups."
+          ]
+        },
+        {
+          "score": 2,
+          "label": "Medium",
+          "bullets": [
+            "Team has dedicated people in some of the key areas of (Dev, BA, QA, Release) but not all.",
+            "Responsibility is unclear, people using best efforts to get work done.",
+            "Team has a dedicated manager.",
+            "Team doesn't have regular stand-ups."
+          ]
+        },
+        {
+          "score": 3,
+          "label": "High",
+          "bullets": [
+            "Team has dedicated people in all key areas of responsibility (Dev, BA, QA, Release).",
+            "Responsibility is clear.",
+            "Team has a dedicated manager.",
+            "Team have regular stand-ups."
+          ]
+        },
+        {
+          "score": 4,
+          "label": "Excellent",
+          "bullets": [
+            "Team has dedicated people in all key areas of responsibility (Dev, BA, QA, Release).",
+            "Responsibility is clear.",
+            "Team has a dedicated manager.",
+            "Manager has regular one on one's with team.",
+            "Team have regular stand-ups.",
+            "Development roadmap/plans are defined and communicated.",
+            "Development strategy is defined and communicated."
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -39,6 +39,10 @@ const Navigation = () => {
     { name: 'DevNotesPlus', path: '/devnotesplus', description: 'Release notes generator' },
   ]
 
+  const resources = [
+    { name: 'Engineering Team Assessment', path: '/team-assessment', description: 'Assess your software team' },
+  ]
+
   const handleMouseEnter = (name) => {
     if (dropdownTimeoutRef.current) {
       clearTimeout(dropdownTimeoutRef.current)
@@ -433,7 +437,33 @@ const Navigation = () => {
                 Blog
               </Link>
             </li>
-            
+
+            <li
+              className="nav-item nav-item-dropdown"
+              onMouseEnter={() => handleMouseEnter('resources')}
+              onMouseLeave={handleMouseLeave}
+            >
+              <button className="nav-link" onClick={(e) => toggleDropdown('resources', e)}>
+                Resources
+                <svg className={`dropdown-arrow ${isOpen('resources') ? 'rotated' : ''}`} viewBox="0 0 20 20" fill="currentColor">
+                  <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+                </svg>
+              </button>
+              <div className={`dropdown-menu ${isOpen('resources') ? 'show' : ''}`}>
+                {resources.map((item) => (
+                  <Link
+                    key={item.path}
+                    to={item.path}
+                    className="dropdown-item"
+                    onClick={() => setActiveDropdown(null)}
+                  >
+                    <div>{item.name}</div>
+                    <div className="dropdown-item-desc">{item.description}</div>
+                  </Link>
+                ))}
+              </div>
+            </li>
+
             <li className="nav-item">
               <Link to="/contact" className="nav-link highlight">
                 Get in Touch
@@ -503,7 +533,26 @@ const Navigation = () => {
             Blog
           </Link>
         </div>
-        
+
+        <div className="mobile-nav-item">
+          <div
+            className="mobile-dropdown-header"
+            onClick={() => setActiveDropdown(activeDropdown === 'mobile-resources' ? null : 'mobile-resources')}
+          >
+            Resources
+            <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" style={{ transform: activeDropdown === 'mobile-resources' ? 'rotate(180deg)' : 'none', transition: 'transform 0.2s' }}>
+              <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
+            </svg>
+          </div>
+          <div className={`mobile-dropdown-items ${activeDropdown === 'mobile-resources' ? 'open' : ''}`}>
+            {resources.map((item) => (
+              <Link key={item.path} to={item.path} className="mobile-dropdown-item" onClick={() => setMobileMenuOpen(false)}>
+                {item.name}
+              </Link>
+            ))}
+          </div>
+        </div>
+
         <Link to="/contact" className="mobile-cta" onClick={() => setMobileMenuOpen(false)}>
           Get in Touch
         </Link>
