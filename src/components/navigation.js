@@ -41,6 +41,7 @@ const Navigation = () => {
 
   const resources = [
     { name: 'Engineering Team Assessment', path: '/team-assessment', description: 'Assess your software team' },
+    { name: 'Position Descriptions', path: '/position-descriptions', description: 'Software engineering roles' },
   ]
 
   const handleMouseEnter = (name) => {
@@ -450,6 +451,13 @@ const Navigation = () => {
                 </svg>
               </button>
               <div className={`dropdown-menu ${isOpen('resources') ? 'show' : ''}`}>
+                <Link
+                  to="/resources"
+                  className="dropdown-item"
+                  onClick={() => setActiveDropdown(null)}
+                >
+                  All Resources
+                </Link>
                 {resources.map((item) => (
                   <Link
                     key={item.path}
@@ -545,6 +553,9 @@ const Navigation = () => {
             </svg>
           </div>
           <div className={`mobile-dropdown-items ${activeDropdown === 'mobile-resources' ? 'open' : ''}`}>
+            <Link to="/resources" className="mobile-dropdown-item" onClick={() => setMobileMenuOpen(false)}>
+              All Resources
+            </Link>
             {resources.map((item) => (
               <Link key={item.path} to={item.path} className="mobile-dropdown-item" onClick={() => setMobileMenuOpen(false)}>
                 {item.name}

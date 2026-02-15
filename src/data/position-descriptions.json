@@ -1,0 +1,217 @@
+[
+  {
+    "id": "development-lead",
+    "title": "Development Lead",
+    "reportsTo": "[Reporting Line]",
+    "employmentType": "Full Time",
+    "employmentStatus": "Ongoing",
+    "classification": "[Classification]",
+    "dateReviewed": "[Date]",
+    "companyInfo": "[Company Name] is a [industry/sector] organisation committed to delivering innovative solutions that [value proposition]. We foster a collaborative and inclusive workplace where talented individuals can grow, contribute, and make a meaningful impact. Our team is dedicated to excellence, continuous improvement, and creating value for our customers and stakeholders.",
+    "roleObjective": "To guide the technical direction of development projects, mentor the development team, and ensure the delivery of high-quality software solutions by bridging strategic planning with hands-on development and balancing technical leadership with people management.",
+    "responsibilities": [
+      "Lead and coordinate the work of developers across one or more project teams",
+      "Define technical standards, coding practices, and architectural guidelines",
+      "Conduct code reviews and ensure adherence to quality standards",
+      "Collaborate with stakeholders to translate business requirements into technical solutions",
+      "Identify and mitigate technical risks throughout the development lifecycle",
+      "Mentor and support the professional growth of team members",
+      "Contribute to estimation, planning, and resource allocation",
+      "Escalate issues and blockers to project or program leadership as needed"
+    ],
+    "qualifications": [
+      "7+ years of software development experience",
+      "2+ years of experience in a technical leadership or team lead role",
+      "Strong understanding of software architecture and design patterns",
+      "Experience with Agile/Scrum methodologies",
+      "Excellent communication and interpersonal skills",
+      "Proven ability to mentor and develop junior team members",
+      "Strong problem-solving and decision-making abilities"
+    ]
+  },
+  {
+    "id": "senior-developer",
+    "title": "Senior Developer",
+    "reportsTo": "[Reporting Line]",
+    "employmentType": "Full Time",
+    "employmentStatus": "Ongoing",
+    "classification": "[Classification]",
+    "dateReviewed": "[Date]",
+    "companyInfo": "[Company Name] is a [industry/sector] organisation committed to delivering innovative solutions that [value proposition]. We foster a collaborative and inclusive workplace where talented individuals can grow, contribute, and make a meaningful impact. Our team is dedicated to excellence, continuous improvement, and creating value for our customers and stakeholders.",
+    "roleObjective": "To design, develop, and maintain complex software systems while providing technical guidance to other developers, leading the implementation of significant features, and contributing to technical decisions that shape the team's direction.",
+    "responsibilities": [
+      "Design and implement complex features and system components",
+      "Write clean, efficient, well-documented, and testable code",
+      "Conduct code reviews and provide constructive feedback to peers",
+      "Troubleshoot and resolve complex technical issues",
+      "Contribute to architectural decisions and technical documentation",
+      "Collaborate with Business Analysts and QA to clarify requirements and ensure quality",
+      "Support and mentor junior and mid-level developers",
+      "Participate in sprint planning, estimation, and retrospectives"
+    ],
+    "qualifications": [
+      "5+ years of professional software development experience",
+      "Deep proficiency in one or more programming languages and frameworks",
+      "Strong understanding of software design principles and patterns",
+      "Experience with version control, CI/CD pipelines, and development tools",
+      "Ability to work independently and drive tasks to completion",
+      "Strong analytical and debugging skills",
+      "Effective communication skills for technical and non-technical audiences"
+    ]
+  },
+  {
+    "id": "developer",
+    "title": "Developer",
+    "reportsTo": "[Reporting Line]",
+    "employmentType": "Full Time",
+    "employmentStatus": "Ongoing",
+    "classification": "[Classification]",
+    "dateReviewed": "[Date]",
+    "companyInfo": "[Company Name] is a [industry/sector] organisation committed to delivering innovative solutions that [value proposition]. We foster a collaborative and inclusive workplace where talented individuals can grow, contribute, and make a meaningful impact. Our team is dedicated to excellence, continuous improvement, and creating value for our customers and stakeholders.",
+    "roleObjective": "To build and maintain software applications according to specifications, write quality code, fix defects, and contribute to the ongoing improvement of the product while working collaboratively within a team environment.",
+    "responsibilities": [
+      "Develop, test, and maintain software features based on requirements",
+      "Write clean, readable, and maintainable code",
+      "Participate in code reviews and incorporate feedback",
+      "Identify and fix bugs and performance issues",
+      "Collaborate with team members to understand requirements and deliver solutions",
+      "Document code and technical processes as required",
+      "Continuously learn and apply new technologies and best practices",
+      "Participate in Agile ceremonies including stand-ups, planning, and retrospectives"
+    ],
+    "qualifications": [
+      "2+ years of software development experience",
+      "Proficiency in at least one programming language",
+      "Familiarity with version control systems (e.g., Git)",
+      "Understanding of basic software development principles",
+      "Ability to work collaboratively in a team environment",
+      "Good problem-solving skills and attention to detail",
+      "Willingness to learn and adapt to new technologies"
+    ]
+  },
+  {
+    "id": "business-analyst",
+    "title": "Business Analyst",
+    "reportsTo": "[Reporting Line]",
+    "employmentType": "Full Time",
+    "employmentStatus": "Ongoing",
+    "classification": "[Classification]",
+    "dateReviewed": "[Date]",
+    "companyInfo": "[Company Name] is a [industry/sector] organisation committed to delivering innovative solutions that [value proposition]. We foster a collaborative and inclusive workplace where talented individuals can grow, contribute, and make a meaningful impact. Our team is dedicated to excellence, continuous improvement, and creating value for our customers and stakeholders.",
+    "roleObjective": "To serve as the bridge between business stakeholders and the technical team by eliciting, analysing, and documenting requirements that ensure delivered solutions meet business needs and provide measurable value.",
+    "responsibilities": [
+      "Gather and document business requirements through stakeholder interviews, workshops, and analysis",
+      "Translate business needs into clear functional specifications and user stories",
+      "Create and maintain documentation including process flows, use cases, and acceptance criteria",
+      "Collaborate with developers and QA to clarify requirements and resolve ambiguities",
+      "Facilitate communication between business stakeholders and technical teams",
+      "Support user acceptance testing and validate that solutions meet requirements",
+      "Identify opportunities for process improvement and system enhancements",
+      "Manage requirement changes and maintain traceability throughout the project"
+    ],
+    "qualifications": [
+      "3+ years of experience as a Business Analyst in software development environments",
+      "Strong skills in requirements elicitation and documentation",
+      "Experience with Agile methodologies and writing user stories",
+      "Proficiency with business analysis tools and documentation software",
+      "Excellent written and verbal communication skills",
+      "Strong analytical and critical thinking abilities",
+      "Ability to manage multiple priorities and stakeholder relationships"
+    ]
+  },
+  {
+    "id": "qa-tester",
+    "title": "QA Tester",
+    "reportsTo": "[Reporting Line]",
+    "employmentType": "Full Time",
+    "employmentStatus": "Ongoing",
+    "classification": "[Classification]",
+    "dateReviewed": "[Date]",
+    "companyInfo": "[Company Name] is a [industry/sector] organisation committed to delivering innovative solutions that [value proposition]. We foster a collaborative and inclusive workplace where talented individuals can grow, contribute, and make a meaningful impact. Our team is dedicated to excellence, continuous improvement, and creating value for our customers and stakeholders.",
+    "roleObjective": "To ensure software quality by designing and executing test cases, identifying defects, and verifying fixes while working closely with developers and Business Analysts to validate that delivered products meet quality standards.",
+    "responsibilities": [
+      "Develop and execute test cases based on requirements and specifications",
+      "Perform functional, regression, and exploratory testing",
+      "Log defects with clear, reproducible steps and supporting evidence",
+      "Verify bug fixes and perform re-testing as needed",
+      "Collaborate with developers to understand features and identify edge cases",
+      "Participate in requirement reviews to identify testability concerns early",
+      "Maintain and update test documentation and test data",
+      "Report on testing progress, coverage, and defect metrics"
+    ],
+    "qualifications": [
+      "2+ years of experience in software quality assurance or testing",
+      "Knowledge of software testing methodologies and the software development lifecycle",
+      "Experience with defect tracking and test management tools",
+      "Strong attention to detail and analytical skills",
+      "Ability to write clear and comprehensive test cases",
+      "Good communication skills for reporting issues effectively",
+      "Basic understanding of programming concepts is an advantage"
+    ]
+  },
+  {
+    "id": "qa-lead",
+    "title": "QA Lead",
+    "reportsTo": "[Reporting Line]",
+    "employmentType": "Full Time",
+    "employmentStatus": "Ongoing",
+    "classification": "[Classification]",
+    "dateReviewed": "[Date]",
+    "companyInfo": "[Company Name] is a [industry/sector] organisation committed to delivering innovative solutions that [value proposition]. We foster a collaborative and inclusive workplace where talented individuals can grow, contribute, and make a meaningful impact. Our team is dedicated to excellence, continuous improvement, and creating value for our customers and stakeholders.",
+    "roleObjective": "To oversee the quality assurance process across projects by defining testing strategies, coordinating the QA team, ensuring consistent quality standards, and driving continuous improvement in testing processes and best practices.",
+    "responsibilities": [
+      "Define and implement QA strategies, standards, and processes",
+      "Plan and coordinate testing activities across project phases",
+      "Lead and mentor the QA team, assigning tasks and reviewing work",
+      "Collaborate with Development Leads and Business Analysts on quality requirements",
+      "Establish and track QA metrics to measure effectiveness and coverage",
+      "Identify opportunities for test automation and process improvement",
+      "Manage defect triage and prioritisation with stakeholders",
+      "Report on overall quality status and risks to project leadership",
+      "Ensure testing environments and data are properly maintained"
+    ],
+    "qualifications": [
+      "5+ years of experience in software quality assurance",
+      "2+ years in a QA leadership or supervisory role",
+      "Strong knowledge of QA methodologies, tools, and best practices",
+      "Experience with both manual and automated testing approaches",
+      "Excellent organisational and planning skills",
+      "Strong communication and stakeholder management abilities",
+      "Ability to analyse quality metrics and drive data-informed decisions",
+      "Experience working in Agile development environments"
+    ]
+  },
+  {
+    "id": "ui-ux-designer",
+    "title": "UI/UX Designer",
+    "reportsTo": "[Reporting Line]",
+    "employmentType": "Full Time",
+    "employmentStatus": "Ongoing",
+    "classification": "[Classification]",
+    "dateReviewed": "[Date]",
+    "companyInfo": "[Company Name] is a [industry/sector] organisation committed to delivering innovative solutions that [value proposition]. We foster a collaborative and inclusive workplace where talented individuals can grow, contribute, and make a meaningful impact. Our team is dedicated to excellence, continuous improvement, and creating value for our customers and stakeholders.",
+    "roleObjective": "To create intuitive, engaging, and accessible user experiences by conducting user research, designing interfaces, and collaborating with developers to ensure products are both visually appealing and highly usable.",
+    "responsibilities": [
+      "Conduct user research, interviews, and usability testing to inform design decisions",
+      "Create wireframes, prototypes, and high-fidelity mockups",
+      "Design intuitive user interfaces that align with brand guidelines and accessibility standards",
+      "Collaborate with Business Analysts to understand user needs and requirements",
+      "Work closely with developers to ensure accurate implementation of designs",
+      "Develop and maintain design systems and component libraries",
+      "Iterate on designs based on user feedback and testing results",
+      "Stay current with UI/UX trends, tools, and best practices",
+      "Present and justify design decisions to stakeholders"
+    ],
+    "qualifications": [
+      "3+ years of experience in UI/UX design for digital products",
+      "Proficiency with design tools (e.g., Figma, Sketch, Adobe XD)",
+      "Strong portfolio demonstrating user-centred design process and outcomes",
+      "Understanding of accessibility standards and responsive design principles",
+      "Experience creating wireframes, prototypes, and design specifications",
+      "Knowledge of front-end capabilities and constraints",
+      "Excellent visual design skills including typography, colour, and layout",
+      "Strong communication and presentation skills",
+      "Ability to receive and incorporate feedback constructively"
+    ]
+  }
+]
