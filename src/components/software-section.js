@@ -4,6 +4,17 @@ import { Link } from 'gatsby'
 const SoftwareSection = () => {
   const products = [
     {
+      name: 'RetroBoard',
+      tagline: 'Real-time retrospectives for your team',
+      description: 'Create a room, share the code, and run collaborative retrospectives with live updates.',
+      icon: '🏁',
+      link: '/retroboard',
+      gradient: 'linear-gradient(135deg, #6366f1 0%, #a78bfa 100%)',
+      bgGlow: 'rgba(99, 102, 241, 0.15)',
+      features: ['Real-time Sync', 'Dot Voting', 'Export to Markdown'],
+      status: 'Available'
+    },
+    {
       name: 'DevNotesPlus',
       tagline: 'Beautiful release notes for developers',
       description: 'Generate stunning, embeddable changelogs for your software. Keep users informed with a powerful API.',
@@ -137,10 +148,18 @@ const SoftwareSection = () => {
         }
         
         .product-card-1::before {
-          background: linear-gradient(90deg, #ff2a6d 0%, #d300c5 100%);
+          background: linear-gradient(90deg, #6366f1 0%, #a78bfa 100%);
         }
         
         .product-card-2::before {
+          background: linear-gradient(90deg, #10b981 0%, #06b6d4 100%);
+        }
+        
+        .product-card-3::before {
+          background: linear-gradient(90deg, #ff2a6d 0%, #d300c5 100%);
+        }
+        
+        .product-card-4::before {
           background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
         }
         
@@ -230,10 +249,18 @@ const SoftwareSection = () => {
         }
         
         .product-card-1:hover .product-name {
-          color: #ff2a6d;
+          color: #818cf8;
         }
         
         .product-card-2:hover .product-name {
+          color: #10b981;
+        }
+        
+        .product-card-3:hover .product-name {
+          color: #ff2a6d;
+        }
+        
+        .product-card-4:hover .product-name {
           color: #818cf8;
         }
         
@@ -300,10 +327,18 @@ const SoftwareSection = () => {
         }
         
         .product-card-1:hover .product-link {
-          color: #ff2a6d;
+          color: #818cf8;
         }
         
         .product-card-2:hover .product-link {
+          color: #10b981;
+        }
+        
+        .product-card-3:hover .product-link {
+          color: #ff2a6d;
+        }
+        
+        .product-card-4:hover .product-link {
           color: #818cf8;
         }
         
