@@ -37,6 +37,7 @@ const Navigation = () => {
     { name: 'Pixel Pomodoro', path: '/pixelpomodoro', description: 'Retro 8-bit focus timer' },
     { name: 'Melodia', path: '/melodia', description: 'Daily habit tracker' },
     { name: 'DevNotesPlus', path: '/devnotesplus', description: 'Release notes generator' },
+    { name: 'Feedback Hub', path: '/feedbackhub', description: 'User feedback for your apps' },
     { name: 'RetroBoard', path: '/retroboard', description: 'Real-time retrospectives' },
   ]
 

@@ -26,6 +26,17 @@ const SoftwareSection = () => {
       status: 'Available'
     },
     {
+      name: 'Feedback Hub',
+      tagline: 'User feedback for your apps',
+      description: 'Add an embeddable widget, collect bug reports and feature ideas, and manage everything from one dashboard.',
+      icon: '💬',
+      link: '/feedbackhub',
+      gradient: 'linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%)',
+      bgGlow: 'rgba(139, 92, 246, 0.15)',
+      features: ['Embeddable Widget', 'Structured Feedback', 'Inbox & Filters'],
+      status: 'Available'
+    },
+    {
       name: 'Pixel Pomodoro',
       tagline: 'Level up your productivity',
       description: 'A retro 8-bit style Pomodoro timer app with multiple nostalgic themes. Master your focus with science-backed time management.',
@@ -156,10 +167,14 @@ const SoftwareSection = () => {
         }
         
         .product-card-3::before {
-          background: linear-gradient(90deg, #ff2a6d 0%, #d300c5 100%);
+          background: linear-gradient(90deg, #8b5cf6 0%, #a78bfa 100%);
         }
         
         .product-card-4::before {
+          background: linear-gradient(90deg, #ff2a6d 0%, #d300c5 100%);
+        }
+        
+        .product-card-5::before {
           background: linear-gradient(90deg, #6366f1 0%, #8b5cf6 100%);
         }
         
@@ -257,11 +272,11 @@ const SoftwareSection = () => {
         }
         
         .product-card-3:hover .product-name {
-          color: #ff2a6d;
+          color: #a78bfa;
         }
         
         .product-card-4:hover .product-name {
-          color: #818cf8;
+          color: #ff2a6d;
         }
         
         .product-tagline {
@@ -335,10 +350,18 @@ const SoftwareSection = () => {
         }
         
         .product-card-3:hover .product-link {
-          color: #ff2a6d;
+          color: #a78bfa;
         }
         
         .product-card-4:hover .product-link {
+          color: #ff2a6d;
+        }
+        
+        .product-card-5:hover .product-name {
+          color: #818cf8;
+        }
+        
+        .product-card-5:hover .product-link {
           color: #818cf8;
         }
         
