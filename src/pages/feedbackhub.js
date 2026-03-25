@@ -304,6 +304,128 @@ const FeedbackHub = () => {
             margin-bottom: 24px;
           }
 
+          .fh-pricing {
+            padding: 6rem 0;
+            border-top: 1px solid var(--border);
+          }
+
+          .fh-pricing-header {
+            text-align: center;
+            max-width: 600px;
+            margin: 0 auto 3rem;
+          }
+
+          .fh-pricing-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.5px;
+          }
+
+          .fh-pricing-header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+            margin: 0;
+          }
+
+          .fh-pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 24px;
+            max-width: 900px;
+            margin: 0 auto;
+          }
+
+          .fh-plan {
+            padding: 28px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: var(--bg-elevated);
+            display: flex;
+            flex-direction: column;
+          }
+
+          .fh-plan.featured {
+            border-color: rgba(139, 92, 246, 0.4);
+            background: linear-gradient(135deg, rgba(139, 92, 246, 0.06), rgba(20, 184, 166, 0.04));
+            position: relative;
+          }
+
+          .fh-plan-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            background: linear-gradient(135deg, #8b5cf6, #14b8a6);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 999px;
+            margin-bottom: 16px;
+            width: fit-content;
+          }
+
+          .fh-plan-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin: 0 0 8px;
+          }
+
+          .fh-plan-price {
+            font-size: 2.25rem;
+            font-weight: 800;
+            letter-spacing: -1px;
+            margin: 0 0 4px;
+            line-height: 1;
+          }
+
+          .fh-plan-price span {
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--text-muted);
+            letter-spacing: 0;
+          }
+
+          .fh-plan-desc {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            margin: 0 0 20px;
+          }
+
+          .fh-plan-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 24px;
+            flex: 1;
+          }
+
+          .fh-plan-features li {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            padding: 6px 0;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            border-bottom: 1px solid var(--border);
+          }
+
+          .fh-plan-features li:last-child {
+            border-bottom: none;
+          }
+
+          .fh-plan-features li::before {
+            content: '✓';
+            color: #14b8a6;
+            font-weight: 700;
+            font-size: 0.8rem;
+            flex-shrink: 0;
+          }
+
+          .fh-plan .fh-btn {
+            width: 100%;
+            margin-top: auto;
+          }
+
           .fh-footer {
             padding: 2rem 0;
             text-align: center;
@@ -551,8 +673,8 @@ const FeedbackHub = () => {
             <h1><span className="highlight">User feedback</span> for your apps</h1>
             <p>Add an embeddable widget, collect bug reports and feature ideas, and manage everything from one dashboard.</p>
             <div className="fh-hero-buttons">
-              <Link to="/contact" className="fh-btn fh-btn-primary">Get Started</Link>
-              <a href="#features" className="fh-btn fh-btn-outline">Learn More</a>
+              <a href="https://feedback.herdingcoders.com/register" className="fh-btn fh-btn-primary">Get Started Free</a>
+              <a href="#pricing" className="fh-btn fh-btn-outline">See Pricing</a>
             </div>
             <div className="fh-hero-mockup">
               <img src="/feedbackhub-dashboard.png" alt="FeedbackHub dashboard interface" />
@@ -605,7 +727,7 @@ const FeedbackHub = () => {
               <div className="fh-step">
                 <div className="fh-step-number">01</div>
                 <h3>Create an app</h3>
-                <p>Sign up, create an app, and set which domains can use your widget.</p>
+                <p>Sign up, create an app, and generate an API token — ready in seconds.</p>
               </div>
               <div className="fh-step">
                 <div className="fh-step-number">02</div>
@@ -620,10 +742,56 @@ const FeedbackHub = () => {
             </div>
           </section>
 
+          <section className="fh-pricing" id="pricing">
+            <div className="fh-pricing-header">
+              <h2>Simple pricing</h2>
+              <p>Start free, upgrade when you're ready</p>
+            </div>
+            <div className="fh-pricing-grid">
+              <div className="fh-plan">
+                <div className="fh-plan-name">Trial</div>
+                <div className="fh-plan-price">Free <span>/ 14 days</span></div>
+                <div className="fh-plan-desc">Try everything, no credit card required.</div>
+                <ul className="fh-plan-features">
+                  <li>Up to 100 apps</li>
+                  <li>5,000 submissions / month</li>
+                  <li>Screenshot uploads</li>
+                  <li>Token-based auth</li>
+                </ul>
+                <a href="https://feedback.herdingcoders.com/register" className="fh-btn fh-btn-outline">Start free trial</a>
+              </div>
+              <div className="fh-plan featured">
+                <div className="fh-plan-badge">Most popular</div>
+                <div className="fh-plan-name">Starter</div>
+                <div className="fh-plan-price">$5 <span>/ month</span></div>
+                <div className="fh-plan-desc">Perfect for indie developers with one product.</div>
+                <ul className="fh-plan-features">
+                  <li>1 app</li>
+                  <li>500 submissions / month</li>
+                  <li>Screenshot uploads</li>
+                  <li>Token-based auth</li>
+                </ul>
+                <a href="https://feedback.herdingcoders.com/register" className="fh-btn fh-btn-primary">Get started</a>
+              </div>
+              <div className="fh-plan">
+                <div className="fh-plan-name">Pro</div>
+                <div className="fh-plan-price">$29 <span>/ month</span></div>
+                <div className="fh-plan-desc">For teams managing multiple products.</div>
+                <ul className="fh-plan-features">
+                  <li>Up to 100 apps</li>
+                  <li>5,000 submissions / month</li>
+                  <li>Screenshot uploads</li>
+                  <li>Token-based auth</li>
+                </ul>
+                <a href="https://feedback.herdingcoders.com/register" className="fh-btn fh-btn-outline">Get started</a>
+              </div>
+            </div>
+          </section>
+
           <section className="fh-cta">
             <h2>Ready to collect feedback?</h2>
             <p>Get your first feedback in under a minute.</p>
-            <Link to="/contact" className="fh-btn fh-btn-primary">Get Started Free</Link>
+            <a href="https://feedback.herdingcoders.com/register" className="fh-btn fh-btn-primary">Get Started Free</a>
           </section>
 
           <footer className="fh-footer">
