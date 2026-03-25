@@ -6,6 +6,7 @@ import Layout from '../components/layout'
 import Hero from '../components/hero'
 import ServicesSection from '../components/services-section'
 import SoftwareSection from '../components/software-section'
+import FeedbackHubBanner from '../components/feedbackhub-banner'
 import BlogPreviewSection from '../components/blog-preview-section'
 
 const RootIndex = ({ data }) => {
@@ -23,6 +24,7 @@ const RootIndex = ({ data }) => {
         />
       </Helmet>
       
+      <FeedbackHubBanner />
       <Hero data={author} />
       <ServicesSection />
       <SoftwareSection />
