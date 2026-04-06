@@ -45,7 +45,7 @@ const SoftwareSection = () => {
       gradient: 'linear-gradient(135deg, #ff2a6d 0%, #d300c5 100%)',
       bgGlow: 'rgba(255, 42, 109, 0.15)',
       features: ['6 Retro Themes', 'Session Tracking', '100% Private'],
-      status: 'Coming Soon'
+      status: 'Available'
     },
     {
       name: 'Melodia',

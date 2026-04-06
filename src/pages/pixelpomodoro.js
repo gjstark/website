@@ -599,7 +599,7 @@ const PixelPomodoro = () => {
           </p>
 
           <div className="cta-buttons">
-            <a href="#download" className="pixel-btn">▶ START FOCUS</a>
+            <a href="https://pomodoro.herdingcoders.com" className="pixel-btn" target="_blank" rel="noopener noreferrer">▶ START FOCUS</a>
             <a href="#features" className="pixel-btn secondary">? LEARN MORE</a>
           </div>
         </section>
@@ -680,22 +680,20 @@ const PixelPomodoro = () => {
           <div className="download-box">
             <h2 className="download-title">READY PLAYER ONE?</h2>
             <p className="download-text">
-              Pixel Pomodoro will transform your productivity into an 8-bit adventure.
-              Free forever. No ads. No BS.
+              Pixel Pomodoro is a PWA — use it in your browser or install it
+              on any device. Free forever. No ads. No BS.
             </p>
 
-            <div style={{
-              fontSize: '24px',
-              color: 'var(--yellow)',
-              textShadow: '3px 3px 0 var(--primary)',
-              margin: '30px 0',
-              animation: 'blink 1.5s step-end infinite'
-            }}>
-              COMING SOON
+            <div className="cta-buttons" style={{ marginTop: '30px' }}>
+              <a href="https://pomodoro.herdingcoders.com" className="pixel-btn" target="_blank" rel="noopener noreferrer">
+                🕹️ PLAY NOW
+              </a>
             </div>
 
-            <p style={{ fontSize: '8px', color: 'var(--text-dim)', marginTop: '30px' }}>
-              STAY TUNED FOR LAUNCH<span className="blink">_</span>
+            <p style={{ fontSize: '8px', color: 'var(--text-dim)', marginTop: '30px', lineHeight: '2.2' }}>
+              INSTALL AS AN APP: OPEN IN YOUR BROWSER,<br />
+              THEN TAP "ADD TO HOME SCREEN" OR<br />
+              THE INSTALL ICON IN YOUR ADDRESS BAR<span className="blink">_</span>
             </p>
           </div>
         </section>
