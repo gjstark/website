@@ -56,7 +56,7 @@ const SoftwareSection = () => {
       gradient: 'linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%)',
       bgGlow: 'rgba(99, 102, 241, 0.15)',
       features: ['Habit Tracking', 'Health Metrics', 'Daily Notes'],
-      status: 'Coming Soon'
+      status: 'Available'
     }
   ]
 

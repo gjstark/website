@@ -713,7 +713,7 @@ const Melodia = () => {
               <li><a href="#how-it-works">How It Works</a></li>
               <li><a href="#privacy">Privacy</a></li>
             </ul>
-            <a href="#download" className="melodia-nav-cta">Get the App</a>
+            <a href="https://melodia.herdingcoders.com" className="melodia-nav-cta" target="_blank" rel="noopener noreferrer">Open App</a>
           </div>
         </nav>
 
@@ -724,7 +724,7 @@ const Melodia = () => {
             <h1>Build better habits, <span>one day at a time</span></h1>
             <p>Track your daily habits, monitor health metrics, and journal your progress. Melodia helps you stay consistent and reach your goals—all while keeping your data private.</p>
             <div className="hero-buttons">
-              <a href="#download" className="melodia-cta-btn">Download Free</a>
+              <a href="https://melodia.herdingcoders.com" className="melodia-cta-btn" target="_blank" rel="noopener noreferrer">Open Melodia</a>
               <a href="#features" className="btn-secondary">Learn More</a>
             </div>
 
@@ -865,8 +865,11 @@ const Melodia = () => {
         {/* CTA Section */}
         <section className="cta-section" id="download">
           <h2>Ready to build better habits?</h2>
-          <p>Join thousands who are transforming their daily routines with Melodia.</p>
-          <a href="#" className="melodia-cta-btn">Download for Android</a>
+          <p>Melodia is a PWA — use it in your browser or install it on any device. Free forever.</p>
+          <a href="https://melodia.herdingcoders.com" className="melodia-cta-btn" target="_blank" rel="noopener noreferrer">Open Melodia</a>
+          <p style={{ fontSize: '0.85rem', color: 'var(--text-muted)', marginTop: '1.5rem', lineHeight: '1.8' }}>
+            To install: open in your browser, then tap "Add to Home Screen"<br />or click the install icon in your address bar.
+          </p>
         </section>
 
         {/* Footer */}
